@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZapTv - Video Chat</title>
+    <link href="./zapt.png" type="image/svg+xml" rel="icon">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="splash-screen">
+        <img src="./zapt.png" alt="ZapTv">
+    </div>
+<main>
+    <div id="auth-dialog" class="modal" style="display: none;">
+        <div class="modal-content" >
+            <div id="auth-container">
+                <div class="container" id="container">
+                    <section class="form-container sign-up-container">
+                        <form action="" method="get">
+                            <h1>Create Account</h1>
+                            <div class="social-icons-container">
+                                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Email" />
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Password" />
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="18+" id="verify" />
+                                <label for="verify">By clicking this you are confirming that you are 18+ and agree with our Privacy policy and Guidelines</label>
+                              </div>
+                            <button id="suBtn" type="button">Sign Up</button>
+                            <button id="gSignUpBtn" type="button"> <img src="./google.png" alt=""> Sign up with Google</button>
+                        </form>
+                    </section>
+        
+                    <section class="form-container sign-in-container">
+                        <form action="" method="get">
+                            <h1>Sign in</h1>
+                            <div class="social-icons-container">
+                                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            <label for="signin-email">Email</label>
+                            <input type="email" id="signin-email" placeholder="Email" />
+                            <label for="signin-password">Password</label>
+                            <input type="password" id="signin-password" placeholder="Password" />
+                            <a id="forgetPass" href="">Forgot your password?</a>
+                            <button id="sBtn" type="button">Sign In</button>
+                            <button id="gSignInBtn" type="button"> <img src="./google.png" alt=""> Sign in with Google</button>
+                        </form>
+                    </section>
+        
+                    <div class="overlay-container">
+                        <div class="overlay">
+                            <div class="overlay-panel overlay-left">
+                                <img id="logo" src="./zapt.png" alt="">
+                                <h2>Meet With New People Everyday</h2>
+                                <button class="ghost" id="signIn">Sign In</button>
+                            </div>
+                            <div class="overlay-panel overlay-right">
+                                <img id="logo" src="./zapt.png" alt="">
+                                <h2>Meet With New People Everyday</h2>
+                                <button class="ghost" id="signUp">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+          </div>
+      </div> 
+    <div class="video-panel">
+        <section class="remote">
+            <h2 class="onlineStatus">Online : </h2>
+            <img src="./zapt.png" class="zap" alt="">
+            <img src="./tail-spin.svg" class="spinner" alt="">
+            <video id="remoteVideo" autoplay playsinline></video>
+        </section>
+        <section class="local">
+            <img src="./res/warn.png" class="warn" alt=""  style="display: none;">
+            <video id="localVideo" autoplay playsinline muted></video>
+        </section>
+        <div class="exit-fullscreen-btn">&#10005;</div>
+    </div>
+    <div class="chat-panel">
+        <div class="chat-log" id="chatLog"></div>
+        <div class="chat-controls">
+            <img class="fullscreen" src="./res/full.png" id="fullscreenButton" alt="Full Screen" >
+            <img src="./res/repot.png" id="reportBtn" alt="Report">
+            <div class="pairing">
+                <button id="startPairing">Start Chat</button>
+                <button id="abortPairing">Cancel</button>
+                <button id="leavePairing">Disconnect</button>
+            </div>
+            <div class="messaging">
+                <input type="text" placeholder="Type a message..." id="chatInput">
+                <button id="chatSend">Send</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<section class="page">
+    <div id="nextpage">
+        <img src="./zapt.png" alt="">
+        <h1>ZapTv</h1>
+    </div>
+    
+      <section id="about-us">
+        <div class="about-label">Connect with others, spark conversations and broaden your social circle</div>
+            <p>Welcome to the ultimate online destination for spontaneous connections and engaging conversations! Introducing our innovative ZapTv, designed to bring people from all corners of the world together in a fun and exciting way. Whether you're looking to make new friends, share your thoughts, or simply beat the boredom, our app has got you covered.</p>
+          
+            <h3>Key Features:</h3>
+            <ul>
+              <li>👥 Instant Connection: Say goodbye to endless scrolling and swiping! Our app pairs you with interesting individuals instantly for captivating video chats.</li>
+              <li>🌎 Global Reach: Explore diverse cultures and perspectives as you connect with people from across the globe, all from the comfort of your own space.</li>
+              <li>🔒 Safe and Secure: Your privacy is our priority. Enjoy worry-free video chats with built-in safety measures and reporting features to ensure a pleasant experience.</li>
+              <li>🔊 Clear Audio: Crystal-clear audio ensures you can hear every word, making the conversation feel as close as an in-person chat.</li>
+            </ul>
+          
+            <p>Discover the joy of meeting new people and fostering connections that last a lifetime. Download ZapTv today and open the door to exciting conversations, endless possibilities, and meaningful friendships. It's time to embark on a journey of discovery, one random chat at a time. Don't miss out—join us now!</p>
+
+      </section>
+
+      <section id="about-us">
+        <div class="about-label">Mobile App</div>
+         <div class="screenshots">
+            <img id="ss1" src="./res/ss1.png" alt="">
+            <img id="ss2" src="./res/ss2.png" alt="">
+            <img src="./res/ss3.png" alt="">
+            <img id="ss4" src="./res/ss4.png" alt="">
+            <img id="ss5" src="./res/ss5.png" alt="">
+         </div>
+         <a href='https://play.google.com/store/apps/details?id=com.yanciar.strangers&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
+      </section>
+    
+      <div class="footer">
+            <div class="footcontainer">
+              <div class="footer-left">
+                <h3>ZapTv</h3>
+                <p class="made-with-love">Made with &hearts; by YanCi</p>
+                <p>Version 1.0.0</p>
+              </div>
+              <div class="footer-right">
+                <nav>
+                  <ul>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Guidelines</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </nav>
+                <div class="user-actions">
+                  <button id="logoutBtn" style="display: none;">Logout</button>
+                  <button id="deleteAccountBtn" style="display: none;">Delete Account</button>
+                </div>
+              </div>
+            </div>
+      </div>
+</section>
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+<script type="module" src="./js/app.js"></script>
+<script src="./nsfwjs/dist/models/mobilenet_v2_mid/model.min.js"></script>
+<script src="./nsfwjs/dist/models/mobilenet_v2_mid/group1-shard1of2.min.js"></script>
+<script src="./nsfwjs/dist/models/mobilenet_v2_mid/group1-shard2of2.min.js"></script>
+<script src="./nsfwjs/dist/browser/nsfwjs.min.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
