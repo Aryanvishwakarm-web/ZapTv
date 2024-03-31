@@ -47,7 +47,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>io.javalin.omeglin.OmeglinMain</mainClass>
+                            <mainClass>io.javalin.zaptv.ZapTvMain</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

@@ -1,4 +1,4 @@
-package io.javalin.omeglin;
+package io.javalin.zaptv;
 
 import io.javalin.websocket.WsContext;
 import io.javalin.websocket.WsConfig;
