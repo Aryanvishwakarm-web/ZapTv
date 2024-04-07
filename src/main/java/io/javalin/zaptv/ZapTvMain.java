@@ -7,16 +7,21 @@ import io.javalin.http.staticfiles.Location;
 public class ZapTvMain {
     public static void main(String[] args) {
 
-        SslPlugin plugin = new SslPlugin(conf -> {
-            conf.pemFromPath("/path/to/cert.pem", "/path/to/key.pem");
-        });
 
         Javalin.create(config -> {
-            config.staticFiles.add("src/main/resources/public", Location.EXTERNAL);
+
+            SslPlugin plugin = new SslPlugin(conf -> {
+                conf.pemFromPath("/live/zaptv.site/fullchain.pem", "/live/zaptv.site/privkey.pem");
+                conf.http2=false;
+                conf.insecure=true;    
+                conf.secure=true;                                                                                                                                                               
+                conf.securePort=443;                                                       
+               
+            });
             config.registerPlugin(plugin);
             config.router.mount(router -> {
                 router.ws("/api/matchmaking", Matchmaking::websocket);
             });
-        }).start(443);
+        }).start("0.0.0.0", 443);
     }
 }
