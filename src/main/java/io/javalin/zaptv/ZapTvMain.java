@@ -20,7 +20,7 @@ public class ZapTvMain {
             });
             config.registerPlugin(plugin);
             config.router.mount(router -> {
-                router.ws("/api/matchmaking", Matchmaking::websocket);
+               
             });
         }).start("0.0.0.0", 443);
     }
